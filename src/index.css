@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: black;
+}
+
+
+.loading-indicator path {
+  stroke-dasharray: 100; /* length of the path */
+  stroke-dashoffset: 100;
+  animation: draw 2s ease-in-out infinite;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* From Uiverse.io by Web-Potato */ 
+button {
+  padding: 0.1em 0.25em;
+  width: 13em;
+  height: 4.2em;
+  background-color: #212121;
+  border: 0.08em solid #fff;
+  border-radius: 0.3em;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+button span {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0.4em;
+  width: 8.25em;
+  height: 2.5em;
+  background-color: #212121;
+  border-radius: 0.2em;
+  font-size: 1.5em;
+  color: #fff;
+  border: 0.08em solid #fff;
+  box-shadow: 0 0.4em 0.1em 0.019em #fff;
+}
+
+button span:hover {
+  transition: all 0.5s;
+  transform: translate(0, 0.4em);
+  box-shadow: 0 0 0 0 #fff;
+}
+
+button span:not(hover) {
+  transition: all 1s;
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.mobile-menu {
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+}
+
+.slide-in {
+  animation: slideIn 0.5s forwards ease-in-out;
+}
+
+.slide-out {
+  animation: slideOut 0.5s forwards ease-in-out;
+}
+
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-99.9%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  white-space: nowrap;
+}
+
+.btn-outline{
+  border: 0.1vw solid transparent;
+  background-color: black;
+  color: #fcf6f6;
+  width: max-content;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn-gradient{
+  z-index: 0;
+  background-image: radial-gradient(circle closest-side at 50% 50%, green, #ffffff00);
+  opacity: 1;
+  animation: go-around-wide 10s linear infinite;
+  transition: transform .2s, opacity .2s;
+  position: absolute;
+  inset: auto auto 0% 0%;
+  transform: translate(-50%, 50%);
+}
+
+@keyframes go-around-wide {
+  0% {
+    left: 0%;
+    bottom: 0%;
+}
+
+15% {
+    left: 0%;
+    bottom: 100%;
+}
+50% {
+    left: 100%;
+    bottom: 100%;
+}
+65% {
+    left: 100%;
+    bottom: 0%;
+}
+100% {
+    left: 0%;
+    bottom: 0%;
+}
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
+}
