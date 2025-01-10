@@ -45,7 +45,7 @@ const Navbar = () => {
         </ul>
 
         <button className="hidden md:flex">
-          <span className="font-CenturySchoolbook"> Schedule A Call</span>
+          <span className="font-CenturySchoolbook text-[1.2vw]">Let&apos;s Talk</span>
         </button>
       </div>
 

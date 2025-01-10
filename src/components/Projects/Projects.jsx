@@ -164,7 +164,7 @@ const Projects = () => {
                                         href={project.links.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent font-CenturySchoolbook flex items-center gap-2 text-[4vw] md:text-[1vw]">
+                                        className="bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent font-CenturySchoolbook flex items-center gap-2 text-[4vw] md:text-[1.1vw]">
                                         <GitHubIcon className="w-5 h-5 text-green-400"/>
                                         GitHub
                                     </a>
@@ -172,7 +172,7 @@ const Projects = () => {
                                         href={project.links.live}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent font-CenturySchoolbook flex items-center gap-2 text-[4vw] md:text-[1vw]">
+                                        className="bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent font-CenturySchoolbook flex items-center gap-2 text-[4vw] md:text-[1.1vw]">
                                         <ExternalLinkIcon className="w-5 h-5 text-green-400"/>
                                         Live View
                                     </a>

@@ -12,7 +12,7 @@ export default {
     },
 
     fontFamily: {
-      CenturySchoolbook: ["Century Schoolbook", "serif"],
+      CenturySchoolbook: ["Century-Schoolbook", "serif"],
     },
 
     extend: {
