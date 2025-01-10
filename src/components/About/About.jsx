@@ -33,8 +33,8 @@ const About = () => {
                                     platforms to real-time collaboration tools. I thrive in collaborative
                                     environments and am always eager to learn new technologies to enhance my craft.
                                     <br/><br/>
-                                    When I&apos;m not coding, you can find me exploring the outdoors, reading tech
-                                    blogs, or contributing to open-source projects. I&apos;m committed to continuous
+                                    When I&apos;m not coding, you can find me exploring the outdoors or reading tech
+                                    blogs. I&apos;m committed to continuous
                                     learning and always looking for opportunities to grow both personally and
                                     professionally.
                                 </p>
@@ -56,7 +56,7 @@ const About = () => {
                         <img
                             src={profileImage}
                             alt="Profile Image"
-                            className="rounded-lg shadow-lg w-full h-[90vw] aspect-square object-cover mix-blend-luminosity md:h-[30vw]"/>
+                            className="rounded-lg shadow-lg w-full h-[90vw] aspect-square object-cover mix-blend-luminosity md:h-[35vw]"/>
                     </div>
                 </div>
 
