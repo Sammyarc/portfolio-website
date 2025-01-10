@@ -14,7 +14,7 @@ const About = () => {
                 <h2
                     className="text-[7.5vw] text-center font-bold font-CenturySchoolbook text-white mb-[4vw] md:text-[3vw]">About Me</h2>
                 <div
-                    className="container mx-auto flex flex-col md:flex-row items-center gap-8 px-4">
+                    className="container mx-auto flex flex-col-reverse md:flex-row items-center gap-8 px-4">
                     {/* Text Section */}
                     <div className="flex-1">
                         <p
@@ -56,7 +56,7 @@ const About = () => {
                         <img
                             src={profileImage}
                             alt="Profile Image"
-                            className="rounded-lg shadow-lg w-full h-[90vw] aspect-square object-cover mix-blend-luminosity object-cover md:h-[30vw]"/>
+                            className="rounded-lg shadow-lg w-full h-[90vw] aspect-square object-cover mix-blend-luminosity md:h-[30vw]"/>
                     </div>
                 </div>
 

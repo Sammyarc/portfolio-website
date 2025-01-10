@@ -111,7 +111,7 @@ const Projects = () => {
                 <h2
                     className="text-[7.5vw] font-bold mb-4 font-CenturySchoolbook text-white md:text-[3vw]">Featured Projects</h2>
                 <p
-                    className="text-white font-CenturySchoolbook text-[4vw] max-w-4xl mx-auto md:text-[1.2vw]">
+                    className="text-white text-left font-CenturySchoolbook text-[4vw] w-[90vw] leading-normal mx-auto md:text-[1.2vw] md:w-[70vw] md:text-center">
                     A curated collection of projects that showcase my skills in building full-stack
                     web applications, solving complex problems, and creating intuitive user
                     experiences.
@@ -164,7 +164,7 @@ const Projects = () => {
                                         href={project.links.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent flex items-center gap-2">
+                                        className="bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent font-CenturySchoolbook flex items-center gap-2 text-[4vw] md:text-[1vw]">
                                         <GitHubIcon className="w-5 h-5 text-green-400"/>
                                         GitHub
                                     </a>
@@ -172,7 +172,7 @@ const Projects = () => {
                                         href={project.links.live}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent flex items-center gap-2">
+                                        className="bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent font-CenturySchoolbook flex items-center gap-2 text-[4vw] md:text-[1vw]">
                                         <ExternalLinkIcon className="w-5 h-5 text-green-400"/>
                                         Live View
                                     </a>
