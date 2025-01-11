@@ -73,7 +73,7 @@ const Navbar = () => {
   <div
     className={`mobile-menu ${
       isOpen ? "slide-in" : "slide-out"
-    } fixed top-0 left-0 right-0 bottom-0 inset-0 bg-black text-white flex flex-col items-center justify-center z-50 md:hidden`}
+    } fixed top-0 left-0 right-0 bottom-0 inset-0 bg-black text-white flex flex-col items-center pt-[30vw] z-50 md:hidden`}
   >
     <button
       onClick={toggleMenu}
@@ -98,7 +98,7 @@ const Navbar = () => {
       <li>
         <a
           href="#about"
-          className="hover:text-green-500 font-CenturySchoolbook"
+          className="hover:bg-gradient-to-r from-green-400 via-white to-green-400 hover:bg-clip-text hover:text-transparent font-CenturySchoolbook"
           onClick={toggleMenu}
         >
           About
@@ -107,7 +107,7 @@ const Navbar = () => {
       <li>
         <a
           href="#projects"
-          className="hover:text-green-500 font-CenturySchoolbook"
+          className="hover:bg-gradient-to-r from-green-400 via-white to-green-400 hover:bg-clip-text hover:text-transparent font-CenturySchoolbook"
           onClick={toggleMenu}
         >
           Projects
@@ -116,9 +116,9 @@ const Navbar = () => {
     </ul>
     
     {/* Bottom Section */}
-    <div className="absolute bottom-10 left-5 right-5 bg-black text-white font-CenturySchoolbook border border-gray-500 rounded-lg p-4 shadow-md flex flex-col items-start">
+    <div className="absolute bottom-10 left-5 right-5 bg-black text-white font-CenturySchoolbook border border-gray-500 rounded-lg p-6 shadow-md flex flex-col items-start">
       <h3 className="text-[6vw] bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent font-semibold">Get in Touch</h3>
-      <p className="text-[4.5vw] leading-normal my-3">Let’s collaborate or discuss exciting projects!</p>
+      <p className="text-[4.5vw] leading-normal my-4">Let’s collaborate or discuss exciting projects!</p>
       <a
         href="  https://calendly.com/nkemakolamsam" // Replace with your Calendly link
         target="_blank"
