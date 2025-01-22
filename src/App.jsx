@@ -7,7 +7,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
 import Certification from "./components/Certifications/Certification";
-import WhatsappButton from "./components/WhatsApp/WhatsappButton";
+import Button from "./components/WhatsApp/Button";
 
 
 const App = () => {
@@ -38,7 +38,7 @@ const App = () => {
           <footer>
             <Footer />
           </footer>
-          <WhatsappButton />
+          <Button />
         </div>
       )}
     </div>
