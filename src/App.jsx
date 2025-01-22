@@ -6,6 +6,8 @@ import Carousel from "./components/Carousel/Carousel";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer/Footer";
+import Certification from "./components/Certifications/Certification";
+import WhatsAppButton from "./components/WhatsApp/WhatsappButton";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -30,10 +32,12 @@ const App = () => {
             <Carousel />
             <About />
             <Projects />
+            <Certification />
           </main>
           <footer>
             <Footer />
           </footer>
+          <WhatsAppButton />
         </div>
       )}
     </div>
