@@ -109,9 +109,9 @@ const Projects = () => {
         <section className="container mx-auto px-4 py-12" id="projects">
             <div className="text-center mb-12">
                 <h2
-                    className="text-[7.5vw] font-bold mb-4 font-CenturySchoolbook text-white md:text-[3vw]">Featured Projects</h2>
+                    className="text-[7.5vw] font-bold mb-4 font-Poppins text-white md:text-[3vw]">Featured Projects</h2>
                 <p
-                    className="text-white text-left font-CenturySchoolbook text-[4vw] w-[90vw] leading-normal mx-auto md:text-[1.2vw] md:w-[70vw] md:text-center">
+                    className="text-white text-left font-Poppins text-[4vw] w-[90vw] leading-normal mx-auto md:text-[1.2vw] md:w-[70vw] md:text-center">
                     A curated collection of projects that showcase my skills in building full-stack
                     web applications, solving complex problems, and creating intuitive user
                     experiences.
@@ -133,13 +133,13 @@ const Projects = () => {
 
                             {/* Project Title */}
                             <h2
-                                className="text-[6vw] text-white font-CenturySchoolbook font-bold mt-4 md:text-[1.5vw]">
+                                className="text-[6vw] text-white font-Poppins font-bold mt-4 md:text-[1.5vw]">
                                 {project.title}
                             </h2>
 
                             {/* Project Summary */}
                             <p
-                                className="text-gray-400 font-CenturySchoolbook text-[4vw] mt-2 md:text-[1vw]">{project.summary}</p>
+                                className="text-gray-400 font-Poppins text-[4vw] mt-2 md:text-[1vw]">{project.summary}</p>
 
                             {/* Technologies Used */}
                             <div className="flex items-center gap-4 mt-4">
@@ -164,7 +164,7 @@ const Projects = () => {
                                         href={project.links.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent font-CenturySchoolbook flex items-center gap-2 text-[4vw] md:text-[1.1vw]">
+                                        className="bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent font-Poppins flex items-center gap-2 text-[4vw] md:text-[1.1vw]">
                                         <GitHubIcon className="w-5 h-5 text-green-400"/>
                                         GitHub
                                     </a>
@@ -172,7 +172,7 @@ const Projects = () => {
                                         href={project.links.live}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent font-CenturySchoolbook flex items-center gap-2 text-[4vw] md:text-[1.1vw]">
+                                        className="bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent font-Poppins flex items-center gap-2 text-[4vw] md:text-[1.1vw]">
                                         <ExternalLinkIcon className="w-5 h-5 text-green-400"/>
                                         Live View
                                     </a>

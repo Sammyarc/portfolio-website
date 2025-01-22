@@ -5,7 +5,7 @@ import Hero from "./components/Hero/Hero";
 import Carousel from "./components/Carousel/Carousel";
 import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
-import Footer from "./Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);

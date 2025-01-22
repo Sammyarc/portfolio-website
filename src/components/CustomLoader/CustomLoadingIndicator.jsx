@@ -61,7 +61,7 @@ const CustomLoadingIndicator = () => {
   />
 </svg>
 
-            <p className="mt-4 px-[2vw] text-[5.5vw] md:text-[2vw] text-center font-semibold font-CenturySchoolbook text-white">
+            <p className="mt-4 px-[2vw] text-[5.5vw] md:text-[2vw] text-center font-semibold font-Poppins text-white">
             <span ref={el}></span>
             </p>
         </div>

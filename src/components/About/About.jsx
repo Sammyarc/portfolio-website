@@ -12,13 +12,13 @@ const About = () => {
         <section className="my-[12vw] md:my-[8vw]" id='about'>
             <div>
                 <h2
-                    className="text-[7.5vw] text-center font-bold font-CenturySchoolbook text-white mb-[4vw] md:text-[3vw]">About Me</h2>
+                    className="text-[7.5vw] text-center font-bold font-Poppins text-white mb-[4vw] md:text-[3vw]">About Me</h2>
                 <div
                     className="container mx-auto flex flex-col-reverse md:flex-row items-center gap-8 px-4">
                     {/* Text Section */}
                     <div className="flex-1">
                         <p
-                            className="text-white font-CenturySchoolbook text-[4vw] mb-4 md:text-[1.2vw]">
+                            className="text-white font-Poppins text-[4vw] mb-4 md:text-[1.2vw]">
                             My journey into the world of software development started like many others -
                             with a curiosity that was part confusion, part excitement. What began as playing
                             around with HTML and CSS in my bedroom has now transformed into a full-blown
@@ -27,7 +27,7 @@ const About = () => {
                         </p>
                         {
                             isExpanded && (
-                                <p className="text-white font-CenturySchoolbook mb-[1vw] text-[4vw] md:text-[1.2vw]">
+                                <p className="text-white font-Poppins mb-[1vw] text-[4vw] md:text-[1.2vw]">
                                     Over the past few years, I&apos;ve honed my skills in JavaScript, React,
                                     Node.js, and MongoDB, working on diverse projects ranging from e-commerce
                                     platforms to real-time collaboration tools. I thrive in collaborative
@@ -41,7 +41,7 @@ const About = () => {
                             )
                         }
                         <span
-                            className="text-[4vw] font-CenturySchoolbook bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent cursor-pointer transition-all delay-150 md:text-[1.4vw]"
+                            className="text-[4vw] font-Poppins bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent cursor-pointer transition-all delay-150 md:text-[1.4vw]"
                             onClick={toggleReadMore}>
                             {
                                 isExpanded

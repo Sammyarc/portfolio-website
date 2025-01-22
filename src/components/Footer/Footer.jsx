@@ -5,7 +5,7 @@ const Footer = () => {
   
     return (
       <footer className=" text-white py-4 text-center">
-        <p className="text-[4.2vw] font-CenturySchoolbook md:text-[1.2vw]">
+        <p className="text-[4.2vw] font-Poppins md:text-[1.2vw]">
           &copy; {currentYear} DevSammy, &nbsp; All Rights Reserved.
         </p>
       </footer>

@@ -45,13 +45,18 @@ const Navbar = () => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-xl font-medium">
           <li>
-            <a href="#about" className="hover:bg-gradient-to-r hover:text-transparent from-green-400 via-white to-green-400 bg-clip-text font-CenturySchoolbook">
+            <a href="#about" className="hover:bg-gradient-to-r hover:text-transparent from-green-400 via-white to-green-400 bg-clip-text font-Poppins">
               About 
             </a>
           </li>
           <li>
-            <a href="#projects" className="hover:bg-gradient-to-r hover:text-transparent from-green-400 via-white to-green-400 bg-clip-text font-CenturySchoolbook">
+            <a href="#projects" className="hover:bg-gradient-to-r hover:text-transparent from-green-400 via-white to-green-400 bg-clip-text font-Poppins">
               Projects
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className="hover:bg-gradient-to-r hover:text-transparent from-green-400 via-white to-green-400 bg-clip-text font-Poppins">
+              Contact
             </a>
           </li>
         </ul>
@@ -62,7 +67,7 @@ const Navbar = () => {
   rel="noopener noreferrer"
   className="hidden md:flex"
 > <button >
-          <span className="font-CenturySchoolbook text-[1.2vw]">Let&apos;s Discuss</span>
+          <span className="font-Poppins text-[1.2vw]">Let&apos;s Discuss</span>
         </button> </a>
         
       
@@ -98,7 +103,7 @@ const Navbar = () => {
       <li>
         <a
           href="#about"
-          className="hover:bg-gradient-to-r from-green-400 via-white to-green-400 hover:bg-clip-text hover:text-transparent font-CenturySchoolbook"
+          className="hover:bg-gradient-to-r from-green-400 via-white to-green-400 hover:bg-clip-text hover:text-transparent font-Poppins"
           onClick={toggleMenu}
         >
           About
@@ -107,16 +112,25 @@ const Navbar = () => {
       <li>
         <a
           href="#projects"
-          className="hover:bg-gradient-to-r from-green-400 via-white to-green-400 hover:bg-clip-text hover:text-transparent font-CenturySchoolbook"
+          className="hover:bg-gradient-to-r from-green-400 via-white to-green-400 hover:bg-clip-text hover:text-transparent font-Poppins"
           onClick={toggleMenu}
         >
           Projects
         </a>
       </li>
+      <li>
+        <a
+          href="#contact"
+          className="hover:bg-gradient-to-r from-green-400 via-white to-green-400 hover:bg-clip-text hover:text-transparent font-Poppins"
+          onClick={toggleMenu}
+        >
+          Contact
+        </a>
+      </li>
     </ul>
     
     {/* Bottom Section */}
-    <div className="absolute bottom-10 left-5 right-5 bg-black text-white font-CenturySchoolbook border border-gray-500 rounded-lg p-6 shadow-md flex flex-col items-start">
+    <div className="absolute bottom-10 left-5 right-5 bg-black text-white font-Poppins border border-gray-500 rounded-lg p-6 shadow-md flex flex-col items-start">
       <h3 className="text-[6vw] bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent font-semibold">Get in Touch</h3>
       <p className="text-[4.5vw] leading-normal my-4">Let’s collaborate or discuss exciting projects!</p>
       <a
