@@ -26,7 +26,7 @@ const Hero = () => {
 
     return (
         <div
-            className="flex flex-col justify-center items-center mt-[30vw] mb-[10vw] text-center md:mt-[12vw] md:mb-[4vw]">
+            className="flex flex-col justify-center items-center mt-[25vw] mb-[10vw] text-center md:mt-[12vw] md:mb-[4vw]">
                 <div className="w-[90vw] h-[9vw] flex justify-center items-center border border-gray-500 rounded-xl md:w-[25vw] md:h-[2.5vw] md:rounded-full">
                 <div
                 className="text-[3.6vw] text-white font-medium font-Poppins md:text-[1vw]">

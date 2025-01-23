@@ -14,7 +14,7 @@ const About = () => {
                 <h2
                     className="text-[7.5vw] text-center font-bold font-Poppins text-white mb-[4vw] md:text-[3vw]">About Me</h2>
                 <div
-                    className="container mx-auto flex flex-col-reverse md:flex-row items-center gap-8 px-4">
+                    className="px-4 mx-auto flex flex-col-reverse md:flex-row items-center gap-8 md:px-[5vw]">
                     {/* Text Section */}
                     <div className="flex-1">
                         <p

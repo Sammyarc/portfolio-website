@@ -2,11 +2,24 @@ import {useState} from "react";
 import {HiOutlineMenuAlt3} from "react-icons/hi";
 import logo from "../../assets/Images/logo/DevSammy Logo.svg";
 import {IoMdArrowForward} from "react-icons/io";
+import {Link, useLocation} from "react-router-dom";
+import {useEffect} from "react";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const [menuVisible, setMenuVisible] = useState(false); // Tracks whether the menu is visible
+
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const section = document.querySelector(location.hash);
+            if (section) {
+                section.scrollIntoView({behavior: "auto"});
+            }
+        }
+    }, [location]);
 
     const toggleMenu = () => {
         if (isOpen) {
@@ -29,13 +42,12 @@ const Navbar = () => {
     return (
         <nav className="bg-black text-white fixed top-0 left-0 w-full z-50 shadow-md">
             <div
-                className="container mx-auto flex items-center justify-between p-4 my-[1vw]">
+                className="p-3 mx-auto flex items-center justify-between my-[1vw] md:px-[5vw] md:py-[2vw]">
                 {/* Logo */}
                 <img
                     src={logo}
                     alt="Dev Sammy logo"
-                    className="w-[25vw] h-[10vw] md:w-[5vw] md:h-[3vw]"/> 
-                {/* Hamburger Menu */}
+                    className="w-[25vw] h-[10vw] md:w-[5vw] md:h-[3vw]"/> {/* Hamburger Menu */}
                 <div className="md:hidden">
                     <button
                         onClick={toggleMenu}
@@ -45,32 +57,35 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Menu */}
-                <ul className="hidden md:flex space-x-8 text-xl font-medium">
+                <ul className="hidden md:flex space-x-8 font-medium">
                     <li>
-                        <a
-                            href="#about"
-                            className="hover:bg-gradient-to-r hover:text-transparent from-green-400 via-white to-green-400 bg-clip-text font-Poppins">
+                        <Link
+                            to="/#about"
+                            className="hover:bg-gradient-to-r hover:text-transparent from-green-400 via-white to-green-400 bg-clip-text font-Poppins md:text-[1.3vw]">
                             About
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="#projects"
-                            className="hover:bg-gradient-to-r hover:text-transparent from-green-400 via-white to-green-400 bg-clip-text font-Poppins">
+                        <Link
+                            to="/#projects"
+                            className="hover:bg-gradient-to-r hover:text-transparent from-green-400 via-white to-green-400 bg-clip-text font-Poppins md:text-[1.3vw]">
                             Projects
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a
-                            href="#contact"
-                            className="hover:bg-gradient-to-r hover:text-transparent from-green-400 via-white to-green-400 bg-clip-text font-Poppins">
+                        <Link
+                            to="/contact"
+                            className="hover:bg-gradient-to-r hover:text-transparent from-green-400 via-white to-green-400 bg-clip-text font-Poppins md:text-[1.3vw]">
                             Contact
-                        </a>
+                        </Link>
                     </li>
                 </ul>
 
-                <a href="https://calendly.com/nkemakolamsam"
-                    target="_blank" rel="noopener noreferrer" className="hidden md:flex">
+                <a
+                    href="https://calendly.com/nkemakolamsam"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hidden md:flex">
                     <button >
                         <span className="font-Poppins text-[1.2vw]">Let&apos;s Discuss</span>
                     </button>
@@ -104,28 +119,28 @@ const Navbar = () => {
                         </button>
                         <ul className="space-y-8 text-2xl font-semibold">
                             <li>
-                                <a
-                                    href="#about"
+                                <Link
+                                    to="/#about"
                                     className="hover:bg-gradient-to-r from-green-400 via-white to-green-400 hover:bg-clip-text hover:text-transparent font-Poppins"
                                     onClick={toggleMenu}>
                                     About
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="#projects"
+                                <Link
+                                    to="/#projects"
                                     className="hover:bg-gradient-to-r from-green-400 via-white to-green-400 hover:bg-clip-text hover:text-transparent font-Poppins"
                                     onClick={toggleMenu}>
                                     Projects
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="#contact"
+                                <Link
+                                    to="/contact"
                                     className="hover:bg-gradient-to-r from-green-400 via-white to-green-400 hover:bg-clip-text hover:text-transparent font-Poppins"
                                     onClick={toggleMenu}>
                                     Contact
-                                </a>
+                                </Link>
                             </li>
                         </ul>
 
@@ -135,8 +150,11 @@ const Navbar = () => {
                             <h3
                                 className="text-[6vw] bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent font-semibold">Get in Touch</h3>
                             <p className="text-[4.5vw] leading-normal my-4">Let’s collaborate or discuss exciting projects!</p>
-                            <a href="https://calendly.com/nkemakolamsam"
-                                target="_blank" rel="noopener noreferrer" className="flex items-center text-[4.5vw] bg-white text-black px-[3vw] py-[2vw] rounded-md font-medium">
+                            <a
+                                href="https://calendly.com/nkemakolamsam"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center text-[4.5vw] bg-white text-black px-[3vw] py-[2vw] rounded-md font-medium">
                                 Let&apos;s Discuss
                                 <IoMdArrowForward size={20} className="ml-2"/>
                             </a>

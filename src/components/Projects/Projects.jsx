@@ -106,7 +106,7 @@ const projectData = [
 const Projects = () => {
 
     return (
-        <section className="container mx-auto px-4 py-12" id="projects">
+        <section className="px-4 mx-auto py-12 md:px-[5vw]" id="projects">
             <div className="text-center mb-12">
                 <h2
                     className="text-[7.5vw] font-bold mb-4 font-Poppins text-white md:text-[3vw]">Featured Projects</h2>
