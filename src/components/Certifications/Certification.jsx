@@ -111,11 +111,9 @@ const Certifications = () => {
                 {/* Header Section */}
                 <div className="mb-8">
                     <h2
-                        className="text-[8vw]  font-Poppins font-bold bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent transition-all delay-150 text-center md:text-left md:text-[3vw]">Check Out</h2>
-                    <p
-                        className="text-white font-Poppins text-[4vw] mb-4 text-center md:text-left md:text-[1.5vw]">MY CERTIFICATES</p>
+                        className="text-[8vw]  font-Poppins font-bold bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent transition-all delay-150 text-center md:text-left md:text-[3vw]">Certifications</h2>
                     <p className="text-gray-400 mt-2 font-Poppins">
-                        I have done various programming courses to increase my skills, and I’m sharing a
+                        I have done various programming courses to upgrade my skills, and I’m sharing a
                         few of them.
                     </p>
 
