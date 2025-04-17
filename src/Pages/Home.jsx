@@ -4,20 +4,27 @@ import Navbar from "../components/Navbar/Navbar";
 import Hero from "../components/Hero/Hero";
 import Carousel from "../components/Carousel/Carousel";
 import Footer from "../components/Footer/Footer";
-// import Button from "../components/WhatsApp/Button";
+
 
 const Home = () => {
-  // const [isLoading, setIsLoading] = useState(() => {
-  //   const loaderShown = sessionStorage.getItem("loaderShown");
-  //   return loaderShown !== "true";
-  // });
+  const [isLoading, setIsLoading] = useState(() => {
+    const loaderShown = sessionStorage.getItem("loaderShown");
+    return loaderShown !== "true";
+  });
 
-  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    const clearSessionStorageTimer = setTimeout(() => {
+      sessionStorage.removeItem("loaderShown");
+    }, 3600000); // Clear after 1 hour (3600000 ms)
+
+    return () => clearTimeout(clearSessionStorageTimer);
+  }, []);
+
 
   useEffect(() => {
     if (isLoading) {
       const timer = setTimeout(() => {
-        // sessionStorage.setItem("loaderShown", "true");
+        sessionStorage.setItem("loaderShown", "true");
         setIsLoading(false);
       }, 6200); 
 
@@ -37,7 +44,6 @@ const Home = () => {
         <footer>
           <Footer />
         </footer>
-        {/* <Button /> */}
       </div>
 
       {/* Loader overlay */}
