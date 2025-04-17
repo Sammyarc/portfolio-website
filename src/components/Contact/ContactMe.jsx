@@ -1,5 +1,4 @@
-
-import  { useState } from "react";
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FiSend } from "react-icons/fi";
 
@@ -64,19 +63,18 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-[5vw] mt-[10vw] md:mt-[8vw]">
-      <p className="text-[8vw] text-center text-white font-Poppins mb-3 md:text-[2.5vw]">
+    <div className="flex flex-col items-center justify-center min-h-screen px-[5vw] mt-[15vw] md:mt-[8vw]">
+      <p className="text-[8vw] text-left text-white font-Poppins mb-3 md:text-[2.5vw] md:text-center">
         Feel free to reach out for collaborations or inquiries!
       </p>
 
-      <form
-        onSubmit={handleSubmit}
-        className="w-[90vw] mt-[1vw] md:w-[40vw]"
-      >
-
+      <form onSubmit={handleSubmit} className="w-[90vw] mt-[5vw] md:mt-[1vw] md:w-[40vw]">
         {/* Full Name */}
         <div className="mb-6">
-          <label htmlFor="fullName" className="block text-[4.5vw] font-Poppins font-semibold text-white mb-2 md:text-[1.2vw]">
+          <label
+            htmlFor="fullName"
+            className="block text-[4.5vw] font-Poppins font-semibold text-white mb-2 md:text-[1.2vw]"
+          >
             Full Name
           </label>
           <input
@@ -92,7 +90,10 @@ const ContactMe = () => {
 
         {/* Email */}
         <div className="mb-6">
-          <label htmlFor="email" className="block text-[4.5vw] font-Poppins font-semibold text-white mb-2 md:text-[1.2vw]">
+          <label
+            htmlFor="email"
+            className="block text-[4.5vw] font-Poppins font-semibold text-white mb-2 md:text-[1.2vw]"
+          >
             Email
           </label>
           <input
@@ -108,7 +109,10 @@ const ContactMe = () => {
 
         {/* Message */}
         <div className="mb-6">
-          <label htmlFor="message" className="block text-[4.5vw] font-Poppins font-semibold text-white mb-2 md:text-[1.2vw]">
+          <label
+            htmlFor="message"
+            className="block text-[4.5vw] font-Poppins font-semibold text-white mb-2 md:text-[1.2vw]"
+          >
             Message
           </label>
           <textarea
@@ -119,11 +123,19 @@ const ContactMe = () => {
             placeholder="Your message"
             className="w-full p-[2.5vw] text-[4vw] border border-gray-400 bg-transparent text-white font-Poppins rounded-md text-sm focus:border-green-300 hover:border-green-300 outline-none md:p-[1vw] md:text-[1vw]"
             rows="5"
-            ></textarea>
+          ></textarea>
         </div>
 
-            {error && <p className="text-red-500 text-[3.8vw] font-Poppins mb-4 md:text-[1vw]">{error}</p>}
-            {success && <p className="text-green-500 text-[3.8vw] font-Poppins mb-4 md:text-[1vw]">{success}</p>}
+        {error && (
+          <p className="text-red-500 text-[3.8vw] font-Poppins mb-4 md:text-[1vw]">
+            {error}
+          </p>
+        )}
+        {success && (
+          <p className="text-green-500 text-[3.8vw] font-Poppins mb-4 md:text-[1vw]">
+            {success}
+          </p>
+        )}
 
         {/* Submit Button */}
         <button
@@ -131,9 +143,7 @@ const ContactMe = () => {
           className="w-full bg-green-700 text-white font-Poppins h-[13vw] rounded-lg text-[4.5vw] border border-gray-700 flex justify-center items-center space-x-[0.5vw] font-semibold md:text-[1vw] md:w-[12vw] md:h-[3vw] md:rounded-md"
         >
           <p> Send Message </p>
-          <FiSend  
-  className="w-[7vw] h-[7vw] rotate-45 md:w-[1.5vw] md:h-[1.5vw]"
-/>
+          <FiSend className="w-[7vw] h-[7vw] rotate-45 md:w-[1.5vw] md:h-[1.5vw]" />
         </button>
       </form>
     </div>

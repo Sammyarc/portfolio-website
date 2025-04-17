@@ -9,10 +9,10 @@ const About = () => {
     };
 
     return (
-        <section className="my-[12vw] md:my-[8vw]" id='about'>
+        <section className="mt-[25vw] px-[4vw] md:mt-[13vw] md:px-0">
             <div>
                 <h2
-                    className="text-[7.5vw] text-center font-bold font-Poppins text-white mb-[4vw] md:text-[3vw]">About Me</h2>
+                    className="text-[7.5vw] px-[4vw] text-left font-bold font-Poppins text-white mb-[4vw] md:text-[3vw] md:px-0 md:text-center">About Me</h2>
                 <div
                     className="px-4 mx-auto flex flex-col-reverse md:flex-row items-center gap-8 md:px-[5vw]">
                     {/* Text Section */}
