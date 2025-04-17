@@ -1,71 +1,52 @@
-import {useEffect, useRef} from "react";
-import Typed from "typed.js";
+import { useEffect, useState } from "react";
 
 const CustomLoadingIndicator = () => {
-    const el = useRef(null); // Reference for the element where Typed.js will run
+  const [count, setCount] = useState(1);
+  const [showContent, setShowContent] = useState(true);
+  const [activeDiv, setActiveDiv] = useState(0);
 
   useEffect(() => {
-    const messages = [
-        "Welcome! Let's create something extraordinary...",
-        "Got an idea? Let's bring it to life together...",
-        "Ready to dive into the possibilities?"
-      ];
-      
+    if (count < 100 && showContent) {
+      const timer = setTimeout(() => setCount(count + 1), 25);
+      return () => clearTimeout(timer);
+    } else if (count === 100) {
+      setTimeout(() => setShowContent(false), 100);
+    }
+  }, [count, showContent]);
 
-    const typed = new Typed(el.current, {
-      strings: messages, // Array of messages
-      typeSpeed: 50, // Speed of typing
-      backSpeed: 30, // Speed of deleting
-      backDelay: 1500, // Delay before starting to delete
-      loop: false, // Loop the messages
-    });
+  useEffect(() => {
+    if (!showContent && activeDiv < 5) {
+      const revealTimer = setTimeout(() => setActiveDiv(activeDiv + 1), 100);
+      return () => clearTimeout(revealTimer);
+    }
+  }, [activeDiv, showContent]);
 
-    return () => {
-      typed.destroy(); // Clean up Typed.js instance on component unmount
-    };
-  }, []);
+  return (
+    <div className="relative h-screen w-screen bg-none overflow-hidden">
+      {/* Welcome text and countdown */}
+      {showContent && (
+        <>
+          <div className="absolute top-1/3 left-0 md:left-10 z-10">
+            <h1 className="text-black text-[17vw] font-bold font-Bricolage md:text-[7vw]">Welcome!</h1>
+          </div>
+          <div className="absolute bottom-5 right-5 z-10">
+            <p className="text-black text-[25vw] font-bold font-Bricolage md:text-[10vw]">{count}</p>
+          </div>
+        </>
+      )}
 
-    return (
-        <div className="flex flex-col items-center justify-center h-screen bg-black">
-           <svg
-  width="100"
-  height="50"
-  viewBox="0 0 120 50"
-  xmlns="http://www.w3.org/2000/svg"
-  className="loading-indicator mx-auto"
->
-   {/* Left angle bracket */}
-  <path
-    d="M30 10 L10 25 L30 40"
-    stroke="white"
-    strokeWidth="2"
-    fill="transparent"
-    transform="translate(-10, 0)"
-  />
-
-   { /* Slash */}
-  <path
-    d="M40 40 L60 10"
-    stroke="white"
-    strokeWidth="2"
-    fill="transparent"
-  />
-
-  {/* Right angle bracket */ }
-  <path
-    d="M70 10 L90 25 L70 40"
-    stroke="white"
-    strokeWidth="2"
-    fill="transparent"
-      
-  />
-</svg>
-
-            <p className="mt-4 px-[2vw] text-[5.5vw] md:text-[2vw] text-center font-semibold font-Poppins text-white">
-            <span ref={el}></span>
-            </p>
-        </div>
-    );
+      {/* 5 vertical reveal bars */}
+      {[...Array(5)].map((_, index) => (
+        <div
+          key={index}
+          className={`absolute h-full w-[20%] bg-white transition-transform duration-700 ease-in-out ${
+            activeDiv > index ? "-translate-y-full" : "translate-y-0"
+          }`}
+          style={{ left: `${index * 20}%` }}
+        ></div>
+      ))}
+    </div>
+  );
 };
 
 export default CustomLoadingIndicator;
