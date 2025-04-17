@@ -1,6 +1,7 @@
 import ContactMe from "../components/Contact/ContactMe"
 import Footer from "../components/Footer/Footer"
 import Navbar from "../components/Navbar/Navbar"
+import Button from "../components/WhatsApp/Button";
 
 
 const Contact = () => {
@@ -12,7 +13,8 @@ const Contact = () => {
           </main>
           <footer>
             <Footer />
-          </footer>
+      </footer>
+      <Button />
     </div>
   )
 }
