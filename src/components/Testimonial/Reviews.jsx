@@ -79,7 +79,7 @@ const Reviews = () => {
   };
 
   return (
-    <div className="mx-auto px-4 pt-12 text-white md:px-[5vw]">
+    <div className="mx-auto px-4 my-12 text-white md:px-[5vw] md:my-[8vw]">
       <h2 className="text-[7.5vw] mb-[4vw] text-center font-bold font-Poppins text-white md:mb-[2vw] md:text-[3vw]">
       Voices of Satisfaction
 </h2>

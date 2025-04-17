@@ -13,7 +13,7 @@ const Button = () => {
   return (
     <div
       onClick={handleWhatsAppClick}
-      className="fixed bottom-[2vw] right-[2vw] bg-green-500 text-white p-[3vw] md:p-[0.8vw] rounded-full shadow-lg cursor-pointer hover:bg-green-600 transition duration-300"
+      className="fixed z-50 bottom-[2vw] right-[2vw] bg-green-500 text-white p-[3vw] md:p-[0.8vw] rounded-full shadow-lg cursor-pointer hover:bg-green-600 transition duration-300"
     >
       <BsWhatsapp size="2.5em"/>
     </div>
