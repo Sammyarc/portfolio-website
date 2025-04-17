@@ -14,9 +14,9 @@ const About = () => {
                 <h2
                     className="text-[7.5vw] px-[4vw] text-left font-bold font-Poppins text-white mb-[4vw] md:text-[3vw] md:px-0 md:text-center">About Me</h2>
                 <div
-                    className="px-4 mx-auto flex flex-col-reverse md:flex-row items-center gap-8 md:px-[5vw]">
+                    className="px-4 mx-auto flex flex-col md:flex-row items-center gap-8 md:px-[5vw]">
                     {/* Text Section */}
-                    <div className="flex-1">
+                    <div className="w-full md:w-[50vw] flex flex-col gap-4">
                         <p
                             className="text-white font-Poppins text-[4vw] mb-4 md:text-[1.2vw]">
                             My journey into the world of software development started like many others -
@@ -52,11 +52,11 @@ const About = () => {
                     </div>
 
                     {/* Image Section */}
-                    <div className="flex-1 w-full">
+                    <div>
                         <img
                             src={profileImage}
                             alt="Profile Image"
-                            className="rounded-lg shadow-lg w-full h-[90vw] aspect-square object-cover mix-blend-luminosity md:h-[35vw]"/>
+                            className="rounded-full w-[80vw] h-[80vw] object-cover mix-blend-luminosity md:w-[32vw] md:h-[32vw]"/>
                     </div>
                 </div>
 
