@@ -63,7 +63,7 @@ const ContactMe = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen px-[5vw] mt-[10vw] md:mt-[8vw]">
+    <div className="flex flex-col items-center justify-center min-h-screen px-[5vw] mt-[6vw] md:mt-[8vw]">
       <p className="text-[8vw] text-left text-white font-Poppins mb-3 md:text-[2.5vw] md:text-center">
         Feel free to reach out for collaborations or inquiries!
       </p>
