@@ -5,6 +5,7 @@ import Image1 from "../../assets/Images/jpeg-optimizer_Macbook-Air-echobazar-eco
 import Image2 from "../../assets/Images/jpeg-optimizer_Macbook-Air-thegreenremedies.com.png";
 import Image3 from "../../assets/Images/jpeg-optimizer_Macbook-Air-tech-hackathon.netlify.app.png";
 import Image4 from "../../assets/Images/jpeg-optimizer_Macbook-Air-clearlink1.netlify.app.png";
+import Image5 from "../../assets/Images/Macbook-Air-paradigmshiftadviser.com.png";
 import { RiNodejsFill, RiTailwindCssFill } from "react-icons/ri";
 import { DiMongodb } from "react-icons/di";
 import { SiExpress } from "react-icons/si";
@@ -46,6 +47,31 @@ const projectData = [
   },
   {
     id: 2,
+    image: Image5,
+    title: "Paradigm Shift",
+    summary:
+      "Built the user interface for a financial advisory web app for a client, Paradigm Shift. The goal was to make financial tools and services easy to access and navigate for users.",
+    technologies: [
+      {
+        name: "HTML5",
+        icon: <FaHtml5 size={26} color="#E34F26" />,
+      },
+      {
+        name: "CSS3",
+        icon: <IoLogoCss3 size={26} color="#1572B6" />,
+      },
+      {
+        name: "Javascript",
+        icon: <IoLogoJavascript size={26} color="#F7DF1E" />,
+      },
+    ],
+    links: {
+      github: "https://github.com/Sammyarc/Paradigm-Shift",
+      live: "https://paradigmshiftadviser.com/",
+    },
+  },
+  {
+    id: 3,
     image: Image2,
     title: "Green Remedies",
     summary:
@@ -66,7 +92,7 @@ const projectData = [
     },
   },
   {
-    id: 3,
+    id: 4,
     image: Image3,
     title: "Shopify Onboarding Screen",
     summary:
@@ -91,7 +117,7 @@ const projectData = [
     },
   },
   {
-    id: 4,
+    id: 5,
     image: Image4,
     title: "Video Conferencing App",
     summary:
@@ -141,7 +167,7 @@ const Projects = () => {
               <img
                 src={project.image}
                 alt={`${project.title} - Project Thumbnail`}
-                className="w-full h-[50vw] object-cover md:h-[15vw]"
+                className="w-full h-[50vw] object-cover hover:scale-105 md:h-[14vw]"
               />
             </div>
 
