@@ -9,6 +9,8 @@ const ContactMe = () => {
     message: "",
   });
 
+  const [isSending, setIsSending] = useState(false);
+
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
@@ -34,31 +36,35 @@ const ContactMe = () => {
     }
 
     setError("");
-    setSuccess("Sending...");
+    setSuccess("");
+    setIsSending(true);
 
     try {
       const result = await emailjs.send(
-        "YOUR_SERVICE_ID", // Replace with your EmailJS Service ID
-        "YOUR_TEMPLATE_ID", // Replace with your EmailJS Template ID
+        "service_kfc0rea",
+        "template_vkrjlmj",
         {
           from_name: formData.fullName,
           from_email: formData.email,
           message: formData.message,
         },
-        "YOUR_PUBLIC_KEY" // Replace with your EmailJS Public Key
+        "Q7PkEp8vlPXsFnhkX"
       );
 
       if (result.status === 200) {
         setSuccess("Your message has been sent successfully!");
         setFormData({ fullName: "", email: "", message: "" });
+        setIsSending(false);
       } else {
         setError("Failed to send your message. Please try again later.");
         setSuccess("");
+        setIsSending(false);
       }
     } catch (err) {
       console.error(err);
       setError("Failed to send your message. Please try again later.");
       setSuccess("");
+      setIsSending(false);
     }
   };
 
@@ -68,7 +74,10 @@ const ContactMe = () => {
         Feel free to reach out for collaborations or inquiries!
       </p>
 
-      <form onSubmit={handleSubmit} className="w-[90vw] mt-[5vw] md:mt-[1vw] md:w-[40vw]">
+      <form
+        onSubmit={handleSubmit}
+        className="w-[90vw] mt-[5vw] md:mt-[1vw] md:w-[40vw]"
+      >
         {/* Full Name */}
         <div className="mb-6">
           <label
@@ -140,10 +149,50 @@ const ContactMe = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="w-full bg-green-700 text-white font-Poppins h-[13vw] rounded-lg text-[4.5vw] border border-gray-700 flex justify-center items-center space-x-[0.5vw] font-semibold md:text-[1vw] md:w-[12vw] md:h-[3vw] md:rounded-md"
+          disabled={
+            !formData.fullName ||
+            !formData.email ||
+            !formData.message ||
+            isSending
+          }
+          className={`w-full bg-green-700 text-white font-Poppins h-[13vw] rounded-lg text-[4.5vw] border border-gray-700 flex justify-center items-center space-x-[0.5vw] font-semibold
+    md:text-[1vw] md:w-[12vw] md:h-[3vw] md:rounded-md
+    ${
+      !formData.fullName || !formData.email || !formData.message || isSending
+        ? "opacity-50 cursor-not-allowed"
+        : ""
+    }`}
         >
-          <p> Send Message </p>
-          <FiSend className="w-[7vw] h-[7vw] rotate-45 md:w-[1.5vw] md:h-[1.5vw]" />
+          {isSending ? (
+            <>
+              <p>Sending...</p>
+              <svg
+                className="animate-spin w-[7vw] h-[7vw] md:w-[1.5vw] md:h-[1.5vw]"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                />
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v4l3-3-3-3v4a8 8 0 00-8 8z"
+                />
+              </svg>
+            </>
+          ) : (
+            <>
+              <p>Send Message</p>
+              <FiSend className="w-[7vw] h-[7vw] rotate-45 md:w-[1.5vw] md:h-[1.5vw]" />
+            </>
+          )}
         </button>
       </form>
     </div>
