@@ -11,6 +11,7 @@ import Image6 from "../../assets/Images/Certifications/CERTIFICATE_LANDING_PAGE~
 import Image7 from "../../assets/Images/Certifications/CERTIFICATE_LANDING_PAGE~WD9NHRBRAB45.jpeg";
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion';
 
 const certifications = [
   {
@@ -125,20 +126,36 @@ const Certifications = () => {
       <div className="flex flex-col md:flex-row justify-between space-x-[2vw] items-center">
         {/* Header Section */}
         <div className="mb-8">
-          <h2 className="text-[8vw] px-[4vw] font-Poppins font-bold bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent transition-all delay-150 text-left md:text-[3vw] md:px-0">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-[8vw] px-[4vw] font-Poppins font-bold bg-gradient-to-r from-green-400 via-white to-green-400 bg-clip-text text-transparent text-left md:text-[3vw] md:px-0"
+          >
             Certifications
-          </h2>
-          <p className="text-gray-400 mt-2 px-[4vw] font-Poppins md:px-0">
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-gray-400 mt-2 px-[4vw] font-Poppins md:px-0"
+          >
             I have done various programming courses to upgrade my skills, and
             I’m sharing a few of them.
-          </p>
+          </motion.p>
         </div>
 
         {/* Slick Carousel */}
         <div className="w-full md:w-[60vw]">
           <Slider {...settings} ref={sliderRef}>
-            {certifications.map((cert) => (
-              <div key={cert.id} className="p-4">
+            {certifications.map((cert, index) => (
+              <motion.div key={cert.id} className="p-4" initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
+                viewport={{ once: true }}>
                 <div className=" text-white overflow-hidden">
                   <Link to={cert.link}>
                     <img
@@ -156,17 +173,20 @@ const Certifications = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </Slider>
           {/* Custom Dots */}
           <div className="slick-dots">
             {certifications.map((_, index) => (
-              <button
+              <motion.button
                 key={index}
                 className={`dot ${activeSlide === index ? "slick-active" : ""}`}
                 onClick={() => sliderRef.current.slickGoTo(index)}
-                // Navigate to the clicked slide
+                initial={{ opacity: 0, scale: 0.6 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                whileHover={{ scale: 1.3 }}
               />
             ))}
           </div>

@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState } from "react";
 import { useRef } from "react";
+import { motion } from 'framer-motion';
 
 const testimonials = [
   {
@@ -39,9 +40,9 @@ const testimonials = [
 ];
 
 const Reviews = () => {
-    const [expandedId, setExpandedId] = useState(null);
-    const [activeSlide, setActiveSlide] = useState(0);
-    const sliderRef = useRef(null); // Create a reference to access slider methods
+  const [expandedId, setExpandedId] = useState(null);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const sliderRef = useRef(null); // Create a reference to access slider methods
 
   const handleToggle = (id) => {
     setExpandedId((prev) => (prev === id ? null : id));
@@ -59,60 +60,73 @@ const Reviews = () => {
     arrows: false,
     beforeChange: (oldIndex, newIndex) => setActiveSlide(newIndex),
     responsive: [
-        {
-            breakpoint: 1024,
-            settings: {
-                slidesToShow: 3
-            }
-        }, {
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 2
-            }
-        }, {
-            breakpoint: 640,
-            settings: {
-                slidesToShow: 1
-            }
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3
         }
+      }, {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2
+        }
+      }, {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1
+        }
+      }
     ]
   };
 
   return (
     <div className="mx-auto px-4 my-12 text-white md:px-[5vw] md:my-[8vw]">
-      <h2 className="text-[7.5vw] mb-[4vw] text-center font-bold font-Poppins text-white md:mb-[2vw] md:text-[3vw]">
-      Voices of Satisfaction
-</h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="text-[7.5vw] mb-[4vw] text-center font-bold font-Poppins text-white md:mb-[2vw] md:text-[3vw]"
+      >
+        Voices of Satisfaction
+      </motion.h2>
       <Slider {...settings} ref={sliderRef}>
-        {testimonials.map((testimonial) => (
-          <div
+        {testimonials.map((testimonial, index) => (
+          <motion.div
             key={testimonial.id}
             className="p-4"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.15 }}
+            viewport={{ once: true }}
           >
             <div className="p-[3vw] border border-gray-500 rounded-md text-white overflow-hidden md:p-[1vw]">
-            <p title="Click to read more" className="text-[4vw] text-gray-300 font-Poppins leading-normal mb-4 md:text-[1.1vw]" onClick={() => handleToggle(testimonial.id)}>
-            {expandedId === testimonial.id
-              ? `"${testimonial.quote}"`
-              : `"${testimonial.quote.slice(0, 200)}..."`}</p>
-            <h3 className="text-[4.2vw] font-Poppins font-semibold md:text-[1.3vw]">{testimonial.name}</h3>
-            <p className="text-green-500 font-Poppins text-sm">{testimonial.designation}</p>
-            </div>  
-          </div>
+              <p title="Click to read more" className="text-[4vw] text-gray-300 font-Poppins leading-normal mb-4 md:text-[1.1vw]" onClick={() => handleToggle(testimonial.id)}>
+                {expandedId === testimonial.id
+                  ? `"${testimonial.quote}"`
+                  : `"${testimonial.quote.slice(0, 200)}..."`}</p>
+              <h3 className="text-[4.2vw] font-Poppins font-semibold md:text-[1.3vw]">{testimonial.name}</h3>
+              <p className="text-green-500 font-Poppins text-sm">{testimonial.designation}</p>
+            </div>
+          </motion.div>
         ))}
       </Slider>
 
       {/* Custom Dots */}
       <div className="slick-dots">
-                        {
-                            testimonials.map((_, index) => (
-                                <button key={index} className={`dot ${activeSlide === index
-                                        ? "slick-active"
-                                        : ""}`} onClick={() => sliderRef.current.slickGoTo(index)}
-                                    // Navigate to the clicked slide
-/>
-                            ))
-                        }
-                    </div>
+        {
+          testimonials.map((_, index) => (
+            <motion.button key={index} className={`dot ${activeSlide === index
+              ? "slick-active"
+              : ""}`} onClick={() => sliderRef.current.slickGoTo(index)}
+              initial={{ opacity: 0, scale: 0.6 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+              whileHover={{ scale: 1.3 }}
+            />
+          ))
+        }
+      </div>
     </div>
   );
 };

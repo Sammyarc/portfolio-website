@@ -9,6 +9,7 @@ import Image5 from "../../assets/Images/Macbook-Air-paradigmshiftadviser.com.png
 import { RiNodejsFill, RiTailwindCssFill } from "react-icons/ri";
 import { DiMongodb } from "react-icons/di";
 import { SiExpress } from "react-icons/si";
+import { motion } from 'framer-motion';
 
 const projectData = [
   {
@@ -146,7 +147,11 @@ const projectData = [
 const Projects = () => {
   return (
     <section className="px-4 mx-auto mt-[25vw] md:mt-[12vw] md:px-[5vw]">
-      <div className="mb-12">
+      <motion.div className="mb-12"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}>
         <h2 className="text-[7.5vw] text-left font-bold mb-4 font-Poppins text-white md:text-[3vw] md:text-center">
           Featured Projects
         </h2>
@@ -155,19 +160,26 @@ const Projects = () => {
           full-stack web applications, solving complex problems, and creating
           intuitive user experiences.
         </p>
-      </div>
+      </motion.div>
       <div className="grid grid-cols-1 gap-8 px-2 md:px-4 md:grid-cols-3">
-        {projectData.map((project) => (
-          <div
+        {projectData.map((project, i) => (
+          <motion.div
             key={project.id}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: i * 0.2 }}
+            whileHover={{ scale: 1.02 }}
+            viewport={{ once: true }}
             className="relative border rounded-lg p-4 md:px-[1vw] md:py-[2vw]"
           >
             {/* Project Image with Overlay */}
             <div className="rounded-lg">
-              <img
+              <motion.img
                 src={project.image}
                 alt={`${project.title} - Project Thumbnail`}
-                className="w-full h-[50vw] object-cover hover:scale-105 md:h-[14vw]"
+                className="w-full h-[50vw] object-cover md:h-[14vw]"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
               />
             </div>
 
@@ -215,7 +227,7 @@ const Projects = () => {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

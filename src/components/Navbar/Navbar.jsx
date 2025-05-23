@@ -5,6 +5,7 @@ import { IoMdArrowForward } from "react-icons/io";
 import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { GoArrowRight } from "react-icons/go";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -89,14 +90,25 @@ const Navbar = () => {
         </ul>
 
         <a
-          href="https://calendly.com/nkemakolamsam"
+          href="https://cal.com/owughikem-nkemakolam-f8f37w"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:flex"
         >
           <button className="bg-transparent border border-[#a1a1a1] box text-white px-[1.4vw] py-[0.7vw] rounded-full font-medium flex items-center justify-center relative z-10">
             <span className="font-Poppins text-[1vw]">Let&apos;s discuss</span>
-            <GoArrowRight size={20} className="ml-2" />
+            <motion.div
+              animate={{ x: [0, 5, 0] }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 1.5,
+                ease: "easeInOut",
+              }}
+            >
+              <GoArrowRight size={20} className="ml-2" />
+            </motion.div>
+            
           </button>
         </a>
       </div>
@@ -166,13 +178,23 @@ const Navbar = () => {
               Let’s collaborate or discuss exciting projects!
             </p>
             <a
-              href="https://calendly.com/nkemakolamsam"
+              href="https://cal.com/owughikem-nkemakolam-f8f37w"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-[4.5vw] bg-white text-black px-[3vw] py-[2vw] rounded-md font-medium"
             >
               Let&apos;s Discuss
-              <IoMdArrowForward size={20} className="ml-2" />
+             <motion.div
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    duration: 1.5,
+                    ease: "easeInOut",
+                  }}>
+
+                  <IoMdArrowForward size={20} className="ml-2" />
+                </motion.div>
             </a>
           </div>
         </div>
