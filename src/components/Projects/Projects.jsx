@@ -1,11 +1,13 @@
 import { FaHtml5, FaGithub as GitHubIcon } from "react-icons/fa";
 import { FiExternalLink as ExternalLinkIcon } from "react-icons/fi";
 import { IoLogoCss3, IoLogoJavascript, IoLogoReact } from "react-icons/io5";
-import Image1 from "../../assets/Images/jpeg-optimizer_Macbook-Air-echobazar-ecommerce.vercel.app.png";
-import Image2 from "../../assets/Images/jpeg-optimizer_Macbook-Air-thegreenremedies.com.png";
-import Image3 from "../../assets/Images/jpeg-optimizer_Macbook-Air-tech-hackathon.netlify.app.png";
-import Image4 from "../../assets/Images/jpeg-optimizer_Macbook-Air-clearlink1.netlify.app.png";
+import Image1 from "../../assets/Images/Macbook-Air-echobazar-ecommerce.vercel.app.png";
+import Image2 from "../../assets/Images/Macbook-Air-thegreenremedies.com.png";
+import Image3 from "../../assets/Images/Macbook-Air-tech-hackathon.netlify.app.png";
+import Image4 from "../../assets/Images/Macbook-Air-clearlink1.netlify.app.png";
 import Image5 from "../../assets/Images/Macbook-Air-paradigmshiftadviser.com.png";
+import Image6 from "../../assets/Images/Screenshot 2025-05-27 180101.png"
+import Image7 from "../../assets/Images/Macbook-Air-lifebank-nine.vercel.app.png"
 import { RiNodejsFill, RiTailwindCssFill } from "react-icons/ri";
 import { DiMongodb } from "react-icons/di";
 import { SiExpress } from "react-icons/si";
@@ -14,6 +16,61 @@ import { motion } from 'framer-motion';
 const projectData = [
   {
     id: 1,
+    image: Image6,
+    title: "Proforma",
+    summary:
+      "A fully functional invoice generation and email sending web application with advanced features like real" +
+      "-time invoice filtering and updates, secure payment integration, user authentication with free and paid tiers, downlaod, export and send email features.",
+    technologies: [
+      {
+        name: "MongoDB",
+        icon: <DiMongodb color="#47A248" size={26} />,
+      },
+      {
+        name: "Express",
+        icon: <SiExpress color="#333333" size={26} />,
+      },
+      {
+        name: "React",
+        icon: <IoLogoReact color="#61DAFB" size={26} />,
+      },
+      {
+        name: "Node.js",
+        icon: <RiNodejsFill color="#339933" size={26} />,
+      },
+      {
+        name: "TailwindCSS",
+        icon: <RiTailwindCssFill color="#06B6D4" size={26} />,
+      },
+    ],
+    links: {
+      github: "https://github.com/Sammyarc/Proforma",
+      live: "https://proforma-gen.vercel.app/",
+    },
+  },
+  {
+    id: 2,
+    image: Image7,
+    title: "LifeBank",
+    summary:
+      "Redesigned a healthcare website which delivers blood, oxygen and medical supplies on order",
+    technologies: [
+      {
+        name: "React",
+        icon: <IoLogoReact color="#61DAFB" size={26} />,
+      },
+      {
+        name: "TailwindCSS",
+        icon: <RiTailwindCssFill color="#06B6D4" size={26} />,
+      },
+    ],
+    links: {
+      github: "https://github.com/Sammyarc/Lifebank",
+      live: "https://lifebank-nine.vercel.app/",
+    },
+  },
+  {
+    id: 3,
     image: Image1,
     title: "Ecobazar",
     summary:
@@ -47,7 +104,7 @@ const projectData = [
     },
   },
   {
-    id: 2,
+    id: 4,
     image: Image5,
     title: "Paradigm Shift",
     summary:
@@ -72,7 +129,7 @@ const projectData = [
     },
   },
   {
-    id: 3,
+    id: 5,
     image: Image2,
     title: "Green Remedies",
     summary:
@@ -93,7 +150,7 @@ const projectData = [
     },
   },
   {
-    id: 4,
+    id: 6,
     image: Image3,
     title: "Shopify Onboarding Screen",
     summary:
@@ -118,7 +175,7 @@ const projectData = [
     },
   },
   {
-    id: 5,
+    id: 7,
     image: Image4,
     title: "Video Conferencing App",
     summary:
