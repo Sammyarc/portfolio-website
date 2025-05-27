@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import profileImage from '../../assets/Images/jpeg-optimizer_1736517613687.jpg';
+import profileImage from '../../assets/Images/1736517613687.jpg';
 
 const About = () => {
     const [isExpanded, setIsExpanded] = useState(false);
