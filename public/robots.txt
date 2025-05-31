@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://devsammy.vercel.app/sitemap.xml
