@@ -7,10 +7,33 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
-<url>
-  <loc>https://devsammy.vercel.app/</loc>
-  <lastmod>2025-05-31T15:31:59+00:00</lastmod>
-</url>
+ <url>
+    <loc>https://devsammy.vercel.app/</loc>
+    <lastmod>2025-05-31T15:31:59+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://devsammy.vercel.app/about</loc>
+    <lastmod>2025-05-31T15:31:59+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://devsammy.vercel.app/projects</loc>
+    <lastmod>2025-05-31T15:31:59+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://devsammy.vercel.app/contact</loc>
+    <lastmod>2025-05-31T15:31:59+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
 
 </urlset>
