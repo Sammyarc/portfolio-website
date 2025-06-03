@@ -56,10 +56,10 @@ const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.5 }}
-        className="flex justify-start ml-8 gap-5 md:justify-center mt-[7vw] mb-[12vw] md:mt-[2vw] md:mb-[4vw]"
+        className="flex flex-col  ml-8 gap-5 mt-[7vw] mb-[12vw] md:flex-row md:justify-center md:mt-[2vw] md:mb-[4vw]"
       >
         <Link to="/projects">
-          <button className="bg-transparent box border border-[#a1a1a1] text-white rounded-full font-medium flex items-center justify-center relative z-10 px-[7vw] py-[3vw] md:px-[1.4vw] md:py-[0.7vw]">
+          <button className="bg-transparent box border border-[#a1a1a1] text-white rounded-full mx-auto font-medium flex items-center justify-center relative z-10 px-[7vw] py-[3vw] md:mx-0 md:px-[1.4vw] md:py-[0.7vw]">
             <span className="font-Poppins text-[4vw] md:text-[1vw]">
               View Works
             </span>
