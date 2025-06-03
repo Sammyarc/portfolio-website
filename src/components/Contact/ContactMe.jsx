@@ -96,7 +96,7 @@ const ContactMe = () => {
 
   return (
     <motion.div
-      className="flex flex-col items-center justify-center min-h-screen px-[5vw] mt-[6vw] md:mt-[8vw]"
+      className="flex flex-col items-center justify-center min-h-screen px-[5vw] mt-[15vw] md:mt-[8vw]"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
