@@ -56,12 +56,31 @@ const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.8, duration: 0.5 }}
-        className="flex justify-start ml-8 md:justify-center mt-[7vw] mb-[12vw] md:mt-[2vw] md:mb-[4vw]"
+        className="flex justify-start ml-8 gap-5 md:justify-center mt-[7vw] mb-[12vw] md:mt-[2vw] md:mb-[4vw]"
       >
         <Link to="/projects">
           <button className="bg-transparent box border border-[#a1a1a1] text-white rounded-full font-medium flex items-center justify-center relative z-10 px-[7vw] py-[3vw] md:px-[1.4vw] md:py-[0.7vw]">
             <span className="font-Poppins text-[4vw] md:text-[1vw]">
               View Works
+            </span>
+            <motion.div
+              animate={{ x: [0, 5, 0] }}
+              transition={{
+                repeat: Infinity,
+                repeatType: "loop",
+                duration: 1.5,
+                ease: "easeInOut",
+              }}
+            >
+              <GoArrowRight size={25} className="ml-2 md:size-[1.2vw]" />
+            </motion.div>
+          </button>
+        </Link>
+
+        <Link to="https://docs.google.com/document/d/19jjpr-4qy6UThhWnrqFfzVIzYJ2Li0rWp4qJiECvg1s/edit?usp=sharing" target="blank">
+          <button className="bg-transparent box border border-[#a1a1a1] text-white rounded-full font-medium flex items-center justify-center relative z-10 px-[7vw] py-[3vw] md:px-[1.4vw] md:py-[0.7vw]">
+            <span className="font-Poppins text-[4vw] md:text-[1vw]">
+              My Resume
             </span>
             <motion.div
               animate={{ x: [0, 5, 0] }}
